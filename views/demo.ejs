@@ -1,0 +1,324 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="jumbotron">
+    <h1>About Heathstone Battlegrounds</h1>
+    <p>This page includes the basic rules of Hearthstone Battlegrounds, recent Heroes Tier List(updated every month) and Video of the week(updated every week)
+    </p>
+    <img width="600" src="/images/logo.jpg"><br><br><br>
+    <h2><Strong> Game Rules</Strong> </h2><hr>
+<div class="accordion" id="gamerules">
+  <div class="accordion-item">
+    <h1 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <h3>General Rules</h3>
+      </button>
+    </h1>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#gamerules">
+      <div class="accordion-body">
+        <h3>
+        Hearthstone Battlegrounds has <strong>60 bosses</strong> and <strong>143 minions</strong> in total. <br>
+        Before each game, each player can select one of the <strong>four</strong> bosses provided, and each boss has its own hero power. The <strong>Tier List</strong> of the heroes is provided in the later section.<br>
+        There are <strong>8 players</strong> in each game, and each player has <strong>40 health</strong> <strong>(exceptPatchwerk, who has 55 health due to its hero power)</strong>. <br>
+        Players end their game when their bosses have 0 or negative health, and the game is ranked based on the time they knock out.<br>
+        There are 2 phases for each round: <strong>Recruit Phase</strong> and <strong>Combat Phase</strong>.
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h1 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <h3>Recruit Phase</h3>
+      </button>
+    </h1>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#gamerules">
+      <div class="accordion-body">
+        <h3>During the <strong>recruit phase</strong>, each player has certain amount of coins (between 3 and 10), and players are allowed to:</h3>
+    <ul>
+      <li> use 3 coins to recruit a minion from the Tavern</li>
+      <li> get 1 coin by selling a minion</li>
+      <li> use 1 coin to refresh all minions in the current Tavern</li>
+      <li> freeze the Tavern and recruit minions in the next round
+      <li> freely rearrange the minions owned</li>
+      <li> automatically fuse 3 identical cards to a triple card and obtain a card from the Tavern Tier above(or from Tier 6 if players are at Tier 6)</li>
+      <li> use a cerntain amount of coins to upgrade the Tavern (details listed below)<br>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Tavern Tier</th>
+              <th>Cost(number of coins)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>10</td>
+            </tr>
+
+          </tbody>
+        </table>
+    </ul>
+    <table class="table table-bordered table-striped">
+      Coins distributed each round:
+      <thead>
+        <tr>
+          <th>Round</th>
+          <th>Coins</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>>=8</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h1 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <h3>Combat Phase</h3>
+      </button>
+    </h1>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#gamerules">
+      <div class="accordion-body">
+        <h3>In the <strong>Combat Phase</strong>, each player enters combat with another player, facing off against their board. At the end of combad, the player with surviving minions deals damage to their opponents. The damage is the Tavern tier + the combined tiers of <strong>all</strong> surviving minions.</h3>
+      </div>
+    </div>
+  </div>
+</div>
+   For more details, please visit <a href="https://playhearthstone.com/en-us/news/23156373">HearthStone Batteground Official Rules.</a><br><br><br>
+
+   <h2><Strong> Heroes and Minions</Strong> <h2><hr>
+   <h3>Currently, there are 60 heroes and 143 minions.</h3>
+   <a href="https://playhearthstone.com/en-us/battlegrounds">Please use this link for more information.</a><br><br><br>
+
+   <h2><Strong> Heroes Tier List (Updated June 2021)</Strong> <h2><hr>
+     <div class="accordion" id="tierlist">
+       <div class="accordion-item">
+         <h1 class="accordion-header" id="headingOneOne">
+           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneOne" aria-expanded="true" aria-controls="collapseOneOne">
+             <h3>Hero of the Month</h3>
+           </button>
+         </h1>
+         <div id="collapseOneOne" class="accordion-collapse collapse show" aria-labelledby="headingOneOne" data-bs-parent="#tierlist">
+           <div class="accordion-body">
+             <img width="200" src="/images/C Thun.png">
+           </div>
+         </div>
+       </div>
+       <div class="accordion-item">
+         <h1 class="accordion-header" id="headingTwoTwo">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoTwo" aria-expanded="false" aria-controls="collapseTwoTwo">
+             <h3>Tier 1 - The Very Best Heroes</h3>
+           </button>
+         </h1>
+         <div id="collapseTwoTwo" class="accordion-collapse collapse" aria-labelledby="headingTwoTwo" data-bs-parent="#tierlist">
+           <div class="accordion-body">
+             <ul>
+              <li>C’Thun</li>
+              <li>Maiev Shadowsong</li>
+              <li>Captain Hooktusk</li>
+              <li>Forest Warden Omu</li>
+              <li>The Great Akazamzarak</li>
+              <li>George the Fallen</li>
+              <li>Arch-Villain Rafaam</li>
+              <li>Millhouse Manastorm</li>
+              <li>Al’Akir the Windlord</li>
+              <li>Death Speaker Blackthorn</li>
+              <li>Jandice Barov</li>
+              <li>Ragnaros the Firelord</li>
+              <li>The Lich King</li>
+            </ul>
+           </div>
+         </div>
+       </div>
+       <div class="accordion-item">
+         <h1 class="accordion-header" id="headingThreeThree">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeThree" aria-expanded="false" aria-controls="collapseThreeThree">
+             <h3>Tier 2 - Generally Strong Heroes</h3>
+           </button>
+         </h1>
+         <div id="collapseThreeThree" class="accordion-collapse collapse" aria-labelledby="headingThreeThree" data-bs-parent="#tierlist">
+           <div class="accordion-body">
+             <ul>
+                <li>Zephrys, the Great</li>
+                <li>Queen Wagtoggle/li>
+                <li>Xyrella</li>
+                <li>Silas Darkmoon</li>
+                <li>Reno Jackson</li>
+                <li>Vol’jin</li>
+                <li>Patches the Pirate</li>
+                <li>Sir Finley Mrrgglton</li>
+                <li>Nozdormu</li>
+                <li>Tickatus</li>
+                <li>Lord Barov</li>
+                <li>Greybough</li>
+                <li>Rakanishu</li>
+                <li>Tess Greymane</li>
+                <li>Kael’thas Sunstrider</li>
+                <li>Yogg-Saron, Hope’s End</li>
+                <li>Infinite Toki</li>
+              </ul>
+
+           </div>
+         </div>
+       </div>
+       <div class="accordion-item">
+         <h1 class="accordion-header" id="headingFourFour">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourFour" aria-expanded="false" aria-controls="collapseFourFour">
+             <h3>Tier 3 - Heroes With Some Strengths</h3>
+           </button>
+         </h1>
+         <div id="collapseFourFour" class="accordion-collapse collapse" aria-labelledby="headingFourFour" data-bs-parent="#tierlist">
+           <div class="accordion-body">
+             <ul>
+               <li>Overlord Saurfang</li>
+               <li>Skycap’n Kragg</li>
+               <li>Millificent Manastorm</li>
+               <li>Mr. Bigglesworth</li>
+               <li>Captain Eudora</li>
+               <li>Patchwerk</li>
+               <li>Y’Shaarj</li>
+               <li>King Mukla</li>
+               <li>Alexstrasza</li>
+               <li>Ysera</li>
+               <li>Deathwing</li>
+               <li>A. F. Kay</li>
+               <li>Dancin’ Deryl</li>
+               <li>Aranna Starseeker</li>
+               <li>N’Zoth</li>
+               <li>Elise Starseeker</li>
+               <li>The Curator</li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       <div class="accordion-item">
+         <h1 class="accordion-header" id="headingFiveFive">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveFive" aria-expanded="false" aria-controls="collapseFiveFive">
+             <h3>Tier 4 - The Weakest heroes</h3>
+           </button>
+         </h1>
+         <div id="collapseFiveFive" class="accordion-collapse collapse" aria-labelledby="headingFiveFive" data-bs-parent="#tierlist">
+           <div class="accordion-body">
+             <ul>
+               <li>Sindragosa</li>
+               <li>Malygos</li>
+               <li>The Rat King</li>
+               <li>Lord Jaraxxus</li>
+               <li>Edwin VanCleef</li>
+               <li>Lich Baz’hial</li>
+               <li>Chenvaala</li>
+               <li>Pyramad</li>
+               <li>Fungalmancer Flurgl</li>
+               <li>Dinotamer Brann</li>
+               <li>Illidan Stormrage</li>
+               <li>Shudderwock</li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       <br>
+       <h3><strong> Video of the Week</strong></h3><hr>
+       <div class="accordion" id="video">
+         <div class="accordion-item">
+           <h1 class="accordion-header" id="headingOneOneOne">
+             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneOneOne" aria-expanded="true" aria-controls="collapseOneOneOne">
+               <h3>June 2021</h3>
+             </button>
+           </h1>
+           <div id="collapseOneOneOne" class="accordion-collapse collapse show" aria-labelledby="headingOneOneOne" data-bs-parent="#video">
+             <div class="accordion-body">
+               <ul>
+                   <li>
+                     <a href="https://www.youtube.com/watch?v=VmOI4EMunJE">June 22nd</a>
+                   </li>
+                   <li>
+                     <a href="https://www.youtube.com/watch?v=ncTOTDGVBHU">June 15th</a>
+                   </li>
+                   <li>
+                     <a href="https://www.youtube.com/watch?v=kvTJ6PwZJz0">June 8th</a>
+                   </li>
+                   <li>
+                     <a href="https://www.youtube.com/watch?v=_3Ph-yI_iGc">June 1st</a>
+                   </li>
+                 </ul>
+             </div>
+           </div>
+         </div><br><br>
+    <h3><strong> Blizzard Games Besides Hearthstone</strong></h3><hr>
+    <div class="card" style="width: 18rem;">
+      <img src="/images/overwatch.png">
+      <div class="card-body">
+        <h3 class="card-title">OverWatch</h3>
+        <a href="https://playoverwatch.com/en-us/" class="btn btn-primary">Go to the website</a>
+      </div>
+    </div><br>
+
+    <div class="card" style="width: 18rem;">
+      <img src="/images/star.jpg">
+      <div class="card-body">
+        <h3 class="card-title">Starcraft</h3>
+        <a href="https://starcraft2.com/en-us/" class="btn btn-primary">Go to the website</a>
+      </div>
+    </div><br>
+
+    <div class="card" style="width: 18rem;">
+      <img src="/images/world.jpg">
+      <div class="card-body">
+        <h3 class="card-title">World of Warcraft</h3>
+        <a href="https://worldofwarcraft.com/en-us/" class="btn btn-primary">Go to the website</a>
+      </div>
+    </div><br>
+</div>
+
+<%- include('bootfooter') -%>

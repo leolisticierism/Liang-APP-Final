@@ -1,0 +1,58 @@
+
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+  <div class="jumbotron">
+    <h1>Hearthstone Information Center</h1>
+    <p>This webpage provides basic information about Hearthstone's battlegrounds, card information, your recent game results, and your hearthstone skill score.</p><br><br>
+    <ul>
+      <li><a href="/demo">Go to the information page </a></li>
+      <li><a href="/cards">See card information </a></li>
+      <li><a href="/about">View author bio</a></li>
+      <% if (loggedIn) {%>
+      <li><a href="/profile">See your profile </a></li>
+      <li><a href="/profiles">See everyone's profile</a></li>
+      <li><a href="/data">See your recent game results</a></li>
+      <li><a href="/score">Calculate your batteleground score</a></li>
+      <li><a href="/survey">Take this survey!</a></li>
+      <% } %>
+    </ul>
+
+    <hr>
+    <h2> Gallary </h2>
+    <div id="frontpage" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img width="600" src="/images/logo.jpg" class="d-block w-20" alt="frontpage">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img width="200" src="/images/C Thun.png" class="d-block w-10"  alt="C'Thun">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img width="200" src="/images/Death Speaker.png" class="d-block w-10" alt="Death Speaker">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img width="200" src="/images/Millhouse.png" class="d-block w-10" alt="Millhouse">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img width="200" src="/images/Mutanus.png" class="d-block w-10" alt="Mutanus">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#frontpage" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#frontpage" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <br>
+      <br>
+   </div>
+  </div>
+
+  <div class="alert alert-warning" role="alert">
+  Don't forget to submit your game results today! <a href="/rank" class="alert-link">Here is the link</a>, and enjoy the rest of the day!
+</div>
+
+<%- include('bootfooter') -%>
