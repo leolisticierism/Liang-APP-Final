@@ -6,6 +6,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const axios = require('axios')
 const chalk = require('chalk')
+const Nexmo = require('nexmo');
 const layouts = require("express-ejs-layouts");
 //const auth = require('./config/auth.js');
 
@@ -172,6 +173,28 @@ app.post('/calcScore', (req,res) => {
   res.locals.finalscore = finalscore
   console.log(chalk.red("Here is your score!"))
   res.render('showScore')
+})
+
+const nexmo = new Nexmo({
+  apiKey: '4abfed19',
+  apiSecret: 'zO2y7bHDukfRpKys',
+}, {debug: true});
+
+app.post("/message", (req,res) => {
+  const from ='18553067591';
+  const to = req.body.phone;
+  const text = 'Hello from Liang Hearthstone Wonderland. Thanks for signing up!';
+  nexmo.message.sendSms(from, to, text, { type: 'unicode'},
+  (err, responseData) => {
+    if(err){
+      console.log(err);
+    } else{
+      console.dir(responseData);
+    }
+  }
+);
+  console.log(chalk.red("Message Sent!"))
+  res.redirect('/')
 })
 
 app.get('/profiles',
