@@ -1,9 +1,10 @@
 <%- include('bootheader') -%>
 <%- include('menubar') -%>
-
+<Body background="/images/bg3.jpg">
+</Body>
 <div class="jumbotron">
-        <h1>Find all hearthstone cards!<h1/>
-</div>
+        <h1>Find all hearthstone cards!</h1>
+
 
 <form method="post" action="/getCards">
     Please type your country's 2-letter code(uppercase):
@@ -17,6 +18,6 @@
     pl-polish; pt-Portuguese; ru-Russian; th-Thai; zh-Chinese(Simplified)<br><br>
     <input type="submit" value = "Find cards!">
 </form>
-
+</div>
 
 <%- include('bootfooter') -%>

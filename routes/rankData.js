@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const chalk = require('chalk')
 const RankData = require('../models/RankData')
 const RankDataHero = require('../models/RankDataHero')
 
@@ -34,6 +35,7 @@ router.get('/remove/:heroId',
   async (req,res,next) => {
       await RankData.remove({_id:req.params.heroId})
       await RankData.remove({heroId:req.params.heroId})
+      console.log(chalk.red("One hero has been removed"))
       res.redirect('/rank')
 })
 
@@ -64,6 +66,7 @@ router.post('/addRanking/:heroId',
       console.dir(rankdata)
       const rankdata2 = new RankDataHero(rankdata)
       await rankdata2.save();
+      console.log(chalk.red("Thanks for submitting your game result!"))
       res.redirect('/rank/'+req.params.heroId)
 });
 

@@ -1,10 +1,10 @@
 <%- include('bootheader') -%>
 <%- include('menubar') -%>
-
+<Body background="/images/bg5.jpg">
+</Body>
     <div class="jumbotron">
         <h1>Your Score</h1>
         <p>Here is your score based on your recent game results</p>
-    </div>
     Your ranks for the recent 5 games are <%= aa %>, <%= bb %>, <%= cc %>, <%= dd %>, <%= ee %>. <br>
 
     <% if (finalscore >100) {%>
@@ -16,5 +16,5 @@
     <hr>
     <a href="/score">Calculate again</a>
 
-
+  </div>
 <%- include('bootfooter') -%>

@@ -1,8 +1,9 @@
 <%- include('bootheader') -%>
 <%- include('menubar') -%>
-
+<Body background="/images/bg1.jpg">
+</Body>
 <div class="jumbotron">
-    <h1>About Heathstone Battlegrounds</h1>
+    <h1><center>About Heathstone Battlegrounds</center></h1><br>
     <p>This page includes the basic rules of Hearthstone Battlegrounds, recent Heroes Tier List(updated every month) and Video of the week(updated every week)
     </p>
     <img width="600" src="/images/logo.jpg"><br><br><br>
@@ -296,29 +297,35 @@
            </div>
          </div><br><br>
     <h3><strong> Blizzard Games Besides Hearthstone</strong></h3><hr>
-    <div class="card" style="width: 18rem;">
-      <img src="/images/overwatch.png">
-      <div class="card-body">
-        <h3 class="card-title">OverWatch</h3>
-        <a href="https://playoverwatch.com/en-us/" class="btn btn-primary">Go to the website</a>
+    <div class = "row">
+      <div class = "col">
+      <div class="card" style="width: 18rem;">
+        <img src="/images/overwatch.png">
+        <div class="card-body">
+          <h3 class="card-title">OverWatch</h3>
+          <a href="https://playoverwatch.com/en-us/" class="btn btn-primary">Go to the website</a>
+        </div>
       </div>
-    </div><br>
-
+      </div><br>
+    <div class = "col">
     <div class="card" style="width: 18rem;">
       <img src="/images/star.jpg">
       <div class="card-body">
         <h3 class="card-title">Starcraft</h3>
         <a href="https://starcraft2.com/en-us/" class="btn btn-primary">Go to the website</a>
       </div>
-    </div><br>
+    </div></div><br>
 
+    <div class = "col">
     <div class="card" style="width: 18rem;">
       <img src="/images/world.jpg">
       <div class="card-body">
         <h3 class="card-title">World of Warcraft</h3>
         <a href="https://worldofwarcraft.com/en-us/" class="btn btn-primary">Go to the website</a>
       </div>
+    </div>
     </div><br>
+  </div>
 </div>
 
 <%- include('bootfooter') -%>

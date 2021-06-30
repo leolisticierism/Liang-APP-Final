@@ -1,0 +1,20 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+<Body background="/images/bg5.jpg">
+</Body>
+<div class="jumbotron">
+        <h1>Find today's weather!</h1>
+        <h3> Reminder: check your terminal/powershell to view weather information</h3>
+<br><br>
+
+<form method="post" action="/getWeather">
+    Please type the city name,followed by state code (ex: San Francisco, CA):
+    <input type="text" name="city"><br>
+
+    Please enter degree type (F or C):
+    <input type="text" name="degree"><br>
+    <input type="submit" value = "See the weather today!">
+</form>
+</div>
+
+<%- include('bootfooter') -%>

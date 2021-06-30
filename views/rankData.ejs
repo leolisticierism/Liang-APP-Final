@@ -1,10 +1,10 @@
 <%- include('bootheader') -%>
 <%- include('menubar') -%>
-
+<Body background="/images/bg5.jpg">
+</Body>
 <div class="jumbotron">
     <h1> Your Game Results </h1>
     <p> Here are the heroes you have played </p>
-
 
     <ul>
       <% rankData.forEach(rank => { %>
@@ -28,7 +28,5 @@
           new hero name: <input type="text" name="heroname"><br>
           <input type="submit" value="new hero!">
       </form>
-
-  </div>
-
+</div>
   <%- include('bootfooter') -%>

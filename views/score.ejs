@@ -1,10 +1,10 @@
 <%- include('bootheader') -%>
 <%- include('menubar') -%>
-
+<Body background="/images/bg5.jpg">
+</Body>
 <div class="jumbotron">
         <h1>Calculate your score!</h1>
         <p> Write down your last 5 hearthstone battleground results!</p>
-</div>
 
     <form method="post" action="/calcScore">
         Game 1<br>
@@ -24,5 +24,5 @@
         Ranking: <input type="number" name = "ee"> <br>
         <input type="submit" value="Calculate Your Score!">
     </form>
-
+</div>
 <%- include('bootfooter') -%>
