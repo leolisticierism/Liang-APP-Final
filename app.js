@@ -5,20 +5,22 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 const axios = require('axios')
+const chalk = require('chalk')
 const layouts = require("express-ejs-layouts");
 //const auth = require('./config/auth.js');
 
 
+
 const mongoose = require( 'mongoose' );
 //mongoose.connect( `mongodb+srv://${auth.atlasAuth.username}:${auth.atlasAuth.password}@cluster0-yjamu.mongodb.net/authdemo?retryWrites=true&w=majority`);
-mongoose.connect( 'mongodb://localhost/authDemo');
+mongoose.connect('mongodb://localhost/liangfinalApp');
 //const mongoDB_URI = process.env.MONGODB_URI
 //mongoose.connect(mongoDB_URI)
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log("we are connected!!!")
+  console.log(chalk.blue("we are connected!!!"))
 });
 
 const authRouter = require('./routes/authentication');
@@ -56,10 +58,12 @@ const myLogger = (req,res,next) => {
   next()
 }
 app.get('/demo',(req,res) => {
+  console.log(chalk.red("Welcome to the information page!"))
   res.render('demo')
 })
 
 app.get('/about',(req,res) => {
+  console.log(chalk.red("Welcome to the author info page!"))
   res.render('about')
 })
 
@@ -67,6 +71,7 @@ app.get("/survey",
   myLogger,
   isLoggedIn,
   (req,res) => {
+  console.log(chalk.red("Please take this survey"))
   res.render("survey")
 })
 
@@ -80,10 +85,12 @@ app.post('/formdata', (req,res) => {
   res.locals.bio = req.body.bio
   res.locals.hearthstone = req.body.hearthstone
   res.locals.feedback = req.body.feedback
+  console.log(chalk.red("Thank you for your response!"))
   res.render('showformdata')
 })
 
 app.get('/cards', (req,res) => {
+  console.log(chalk.red("Please enter your country and language"))
   res.render('cards')
 })
 
@@ -96,16 +103,43 @@ app.post("/getCards",
       const result = await axios.get(url)
       res.locals.result = result.data
       res.locals.url = url
+      console.log(chalk.red("Here are the cards!"))
       res.render('showCards')
     } catch(error){
       next(error)
     }
 })
 
+var weather = require('weather-js')
+
+app.get('/weather', (req,res) => {
+  console.log(chalk.red("Check the weather!"))
+  res.render('weather')
+})
+
+app.post("/getWeather",
+  async (req,res,next) => {
+    try {
+      const city = req.body.city
+      const degree = req.body.degree
+      weather.find({search: city, degreeType: degree}, function(err, result) {
+        if(err) console.log(err);
+        console.log(JSON.stringify(result, null, 2));
+
+  });
+  console.log(chalk.red("Here is the weather info"))
+  res.locals.city = city
+  res.render('showWeather')
+  }catch(error){
+    next(error)
+  }
+})
+
 app.get("/score",
   myLogger,
   isLoggedIn,
   (req,res) => {
+  console.log(chalk.red("Calculate your battleground score!"))
   res.render("score")
 })
 
@@ -136,6 +170,7 @@ app.post('/calcScore', (req,res) => {
   res.locals.score = score
   res.locals.bonus = bonus
   res.locals.finalscore = finalscore
+  console.log(chalk.red("Here is your score!"))
   res.render('showScore')
 })
 
@@ -193,6 +228,7 @@ app.post('/editProfile',
       }
 
     })
+
 
 
 app.use('/daTa',(req,res) => {
